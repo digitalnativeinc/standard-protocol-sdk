@@ -1,16 +1,16 @@
 {
-  "name": "@sushiswap/sdk",
+  "name": "@digitalnativeinc/standard-protocol-sdk",
   "license": "MIT",
-  "version": "5.0.0-canary.67",
-  "description": "🛠 An SDK for building applications on top of SushiSwap.",
+  "version": "0.0.11",
+  "description": "🛠 An SDK for building applications on top of Standard Protocol.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/sushiswap/sushiswap-sdk",
+  "repository": "https://github.com/digitalnativeinc/standard-protocol-sdk",
   "keywords": [
-    "sushiswap",
+    "standard protocol",
     "ethereum",
     "sdk"
   ],
@@ -69,8 +69,6 @@
     "@ethersproject/signing-key": "^5.4.0",
     "@ethersproject/solidity": "^5.4.0",
     "@ethersproject/transactions": "^5.4.0",
-    "@sushiswap/core": "^2.0.0-canary.1",
-    "@sushiswap/prettier-config": "^0.1.0",
     "@types/big.js": "^6.1.0",
     "babel-plugin-transform-jsbi-to-bigint": "^1.4.0",
     "eip-712": "^0.4.3",
@@ -81,5 +79,8 @@
   },
   "engines": {
     "node": ">=12"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }

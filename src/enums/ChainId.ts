@@ -4,6 +4,7 @@ export enum ChainId {
   RINKEBY = 4,
   GÖRLI = 5,
   KOVAN = 42,
+  SHIBUYA = 81,
   MATIC = 137,
   MATIC_TESTNET = 80001,
   FANTOM = 250,
