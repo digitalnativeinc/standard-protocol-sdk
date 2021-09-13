@@ -7,11 +7,11 @@ export const PROTOCOLS = {
   SUSHISWAP
 };
 
-export const getFactoryAddresses = (protocol: Protocol, chainId: number) => {
+export const getFactoryAddress = (protocol: Protocol, chainId: number) => {
   return PROTOCOLS[protocol].FACTORY_ADDRESS[chainId];
 };
 
-export const getRouterAddresses = (protocol: Protocol, chainId: number) => {
+export const getRouterAddress = (protocol: Protocol, chainId: number) => {
   return PROTOCOLS[protocol].ROUTER_ADDRESS[chainId];
 };
 
