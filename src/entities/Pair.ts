@@ -1,5 +1,5 @@
 import {
-  FACTORY_ADDRESS,
+  // FACTORY_ADDRESS,
   FIVE,
   MINIMUM_LIQUIDITY,
   ONE,
@@ -20,7 +20,7 @@ import { Token } from "./Token";
 import { computePairAddress } from "../functions/computePairAddress";
 import invariant from "tiny-invariant";
 import { sqrt } from "../functions/sqrt";
-import { getFactoryAddress } from "constants/protocols";
+import { getFactoryAddress } from "../constants";
 import { Protocol } from "enums";
 
 export class Pair {
