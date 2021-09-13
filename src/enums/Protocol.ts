@@ -1,0 +1,4 @@
+export enum Protocol {
+  STANDARD_PROTOCOL = "STANDARD_PROTOCOL",
+  SUSHISWAP = "SUSHISWAP"
+}
