@@ -333,5 +333,12 @@ export const WNATIVE: TokenMap = {
     18,
     "WMOVR",
     "Wrapped Moonriver"
-  )
+  ),
+  [ChainId.SHIBUYA]: new Token(
+    ChainId.SHIBUYA,
+    WNATIVE_ADDRESS[ChainId.SHIBUYA],
+    18,
+    "WSBY",
+    "Wrapped Shibuya"
+  ),
 };
