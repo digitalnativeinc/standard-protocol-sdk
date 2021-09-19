@@ -76,6 +76,35 @@ export const ROUTER_ADDRESS: AddressMap = {
   [ChainId.MOONRIVER]: "0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506"
 };
 
+export const STND_ADDRESS: AddressMap = {
+  [ChainId.MAINNET]: "0x9040e237C3bF18347bb00957Dc22167D0f2b999d",
+  [ChainId.ROPSTEN]: "",
+  [ChainId.RINKEBY]: "0x3b333B767011D5B28B3a1b88d6c2c26cc68C27D4",
+  [ChainId.GÖRLI]: "",
+  [ChainId.KOVAN]: "",
+  [ChainId.FANTOM]: "",
+  [ChainId.FANTOM_TESTNET]: "",
+  [ChainId.MATIC]: "0x08BE454de533509e8832B257116C5506E55b0b64",
+  [ChainId.MATIC_TESTNET]: "",
+  [ChainId.XDAI]: "",
+  [ChainId.BSC]: "",
+  [ChainId.BSC_TESTNET]: "",
+  [ChainId.ARBITRUM]: "",
+  [ChainId.ARBITRUM_TESTNET]: "",
+  [ChainId.MOONBEAM_TESTNET]: "",
+  [ChainId.AVALANCHE]: "",
+  [ChainId.AVALANCHE_TESTNET]: "",
+  [ChainId.HECO]: "",
+  [ChainId.HECO_TESTNET]: "",
+  [ChainId.HARMONY]: "",
+  [ChainId.HARMONY_TESTNET]: "",
+  [ChainId.OKEX]: "",
+  [ChainId.OKEX_TESTNET]: "",
+  [ChainId.CELO]: "",
+  [ChainId.PALM]: "",
+  [ChainId.PALM_TESTNET]: ""
+};
+
 export const SUSHI_ADDRESS: AddressMap = {
   [ChainId.MAINNET]: "0x6B3595068778DD592e39A122f4f5a5cF09C90fE2",
   [ChainId.ROPSTEN]: "0x0769fd68dFb93167989C6f7254cd0D766Fb2841F",
