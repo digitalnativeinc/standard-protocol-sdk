@@ -3,7 +3,7 @@ import { keccak256, pack } from "@ethersproject/solidity";
 import { getInitCodeHash } from "../constants";
 import { Token } from "../entities";
 import { getCreate2Address } from "@ethersproject/address";
-import { Protocol } from "enums";
+import { Contract, Protocol } from "../enums";
 
 export const computePairAddress = ({
   factoryAddress,
@@ -25,6 +25,6 @@ export const computePairAddress = ({
       ["bytes"],
       [pack(["address", "address"], [token0.address, token1.address])]
     ),
-    getInitCodeHash(protocol)
+    getInitCodeHash(protocol, tokenA.chainId, Contract.FACTORY)
   );
 };
