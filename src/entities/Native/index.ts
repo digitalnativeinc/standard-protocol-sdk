@@ -12,3 +12,4 @@ export { Okex } from "./Okex";
 export { xDai } from "./xDai";
 export { Palm } from "./Palm";
 export { Shibuya } from "./Shibuya";
+export { Shiden } from "./Shiden";

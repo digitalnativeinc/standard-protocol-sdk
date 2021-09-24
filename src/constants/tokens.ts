@@ -219,6 +219,13 @@ export const WNATIVE: TokenMap = {
     "WSBY",
     "Wrapped SBY"
   ),
+  [ChainId.SHIDEN]: new Token(
+    ChainId.SHIDEN,
+    WNATIVE_ADDRESS[ChainId.SHIDEN],
+    18,
+    "WSDN",
+    "Wrapped SDN"
+  ),
   [ChainId.FANTOM]: new Token(
     ChainId.FANTOM,
     WNATIVE_ADDRESS[ChainId.FANTOM],
