@@ -11,6 +11,7 @@ import {
   Okex,
   Palm,
   Shibuya,
+  Shiden,
   xDai
 } from "../entities/Native";
 
@@ -23,6 +24,7 @@ export const NATIVE = {
   [ChainId.GÖRLI]: Ether.onChain(ChainId.GÖRLI),
   [ChainId.KOVAN]: Ether.onChain(ChainId.KOVAN),
   [ChainId.SHIBUYA]: Shibuya.onChain(ChainId.SHIBUYA),
+  [ChainId.SHIDEN]: Shiden.onChain(ChainId.SHIDEN),
   [ChainId.FANTOM]: Fantom.onChain(ChainId.FANTOM),
   [ChainId.FANTOM_TESTNET]: Fantom.onChain(ChainId.FANTOM_TESTNET),
   [ChainId.MATIC]: Matic.onChain(ChainId.MATIC),
