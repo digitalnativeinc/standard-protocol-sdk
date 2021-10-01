@@ -26,6 +26,13 @@ export const USDC: TokenMap = {
     "USDC",
     "USD Coin"
   ),
+  [ChainId.SHIBUYA]: new Token(
+    ChainId.SHIBUYA,
+    USDC_ADDRESS[ChainId.SHIBUYA],
+    6,
+    "USDC",
+    "USD Coin"
+  ),
   [ChainId.MATIC]: new Token(
     ChainId.MATIC,
     USDC_ADDRESS[ChainId.MATIC],
@@ -120,6 +127,13 @@ export const WETH9: TokenMap = {
     "WETH",
     "Wrapped Ether"
   ),
+  [ChainId.SHIBUYA]: new Token(
+    ChainId.SHIBUYA,
+    WETH9_ADDRESS[ChainId.SHIBUYA],
+    18,
+    "WETH",
+    "Wrapped Ether"
+  ),
   [ChainId.ARBITRUM]: new Token(
     ChainId.ARBITRUM,
     WETH9_ADDRESS[ChainId.ARBITRUM],
@@ -198,7 +212,20 @@ export const WNATIVE: TokenMap = {
   [ChainId.RINKEBY]: WETH9[ChainId.RINKEBY],
   [ChainId.GÖRLI]: WETH9[ChainId.GÖRLI],
   [ChainId.KOVAN]: WETH9[ChainId.KOVAN],
-  // [ChainId.SHIBUYA]: new Token(ChainId.SHIBUYA, )
+  [ChainId.SHIBUYA]: new Token(
+    ChainId.SHIBUYA,
+    WNATIVE_ADDRESS[ChainId.SHIBUYA],
+    18,
+    "WSBY",
+    "Wrapped SBY"
+  ),
+  [ChainId.SHIDEN]: new Token(
+    ChainId.SHIDEN,
+    WNATIVE_ADDRESS[ChainId.SHIDEN],
+    18,
+    "WSDN",
+    "Wrapped SDN"
+  ),
   [ChainId.FANTOM]: new Token(
     ChainId.FANTOM,
     WNATIVE_ADDRESS[ChainId.FANTOM],

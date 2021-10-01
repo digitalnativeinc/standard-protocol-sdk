@@ -60,6 +60,59 @@ export const SUSHISWAP: ProtocolMap = {
     [ChainId.PALM_TESTNET]: "",
     [ChainId.MOONRIVER]: "0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506"
   },
-  INIT_CODE_HASH:
-    "0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303"
+  INIT_CODE_HASH: {
+    FACTORY: {
+      [ChainId.MAINNET]:
+        "0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303",
+      [ChainId.RINKEBY]:
+        "0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303",
+      [ChainId.ROPSTEN]:
+        "0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303",
+      [ChainId.GÖRLI]:
+        "0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303",
+      [ChainId.KOVAN]:
+        "0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303",
+      [ChainId.FANTOM]:
+        "0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303",
+      [ChainId.FANTOM_TESTNET]: "",
+      [ChainId.MATIC]:
+        "0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303",
+      [ChainId.MATIC_TESTNET]:
+        "0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303",
+      [ChainId.XDAI]:
+        "0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303",
+      [ChainId.BSC]:
+        "0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303",
+      [ChainId.BSC_TESTNET]:
+        "0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303",
+      [ChainId.ARBITRUM]:
+        "0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303",
+      [ChainId.ARBITRUM_TESTNET]: "",
+      [ChainId.MOONBEAM_TESTNET]:
+        "0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303",
+      [ChainId.AVALANCHE]:
+        "0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303",
+      [ChainId.AVALANCHE_TESTNET]:
+        "0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303",
+      [ChainId.HECO]:
+        "0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303",
+      [ChainId.HECO_TESTNET]:
+        "0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303",
+      [ChainId.HARMONY]:
+        "0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303",
+      [ChainId.HARMONY_TESTNET]:
+        "0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303",
+      [ChainId.OKEX]:
+        "0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303",
+      [ChainId.OKEX_TESTNET]:
+        "0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303",
+      [ChainId.CELO]:
+        "0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303",
+      [ChainId.PALM]:
+        "0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303",
+      [ChainId.PALM_TESTNET]: "",
+      [ChainId.MOONRIVER]:
+        "0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303"
+    }
+  }
 };

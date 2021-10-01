@@ -1,4 +1,4 @@
-import { Protocol } from "enums/Protocol";
+import { Protocol, Contract } from "../../enums";
 import { STANDARD_PROTOCOL } from "./standardprotocol";
 import { SUSHISWAP } from "./sushiswap";
 
@@ -15,6 +15,14 @@ export const getRouterAddress = (protocol: Protocol, chainId: number) => {
   return PROTOCOLS[protocol].ROUTER_ADDRESS[chainId];
 };
 
-export const getInitCodeHash = (protocol: Protocol) => {
-  return PROTOCOLS[protocol].INIT_CODE_HASH;
+export const getMasterPoolAddress = (protocol: Protocol, chainId: number) => {
+  return PROTOCOLS[protocol].MASTER_POOL_ADDRESS?.[chainId];
+};
+
+export const getInitCodeHash = (
+  protocol: Protocol,
+  chainId: number,
+  contract: Contract
+) => {
+  return PROTOCOLS[protocol].INIT_CODE_HASH[contract][chainId];
 };

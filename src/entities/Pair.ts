@@ -21,7 +21,7 @@ import { computePairAddress } from "../functions/computePairAddress";
 import invariant from "tiny-invariant";
 import { sqrt } from "../functions/sqrt";
 import { getFactoryAddress } from "../constants";
-import { Protocol } from "enums";
+import { Protocol } from "../enums";
 
 export class Pair {
   public readonly liquidityToken: Token;

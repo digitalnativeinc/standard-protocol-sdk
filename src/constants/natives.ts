@@ -10,10 +10,12 @@ import {
   Movr,
   Okex,
   Palm,
+  Shibuya,
+  Shiden,
   xDai
-} from '../entities/Native'
+} from "../entities/Native";
 
-import { ChainId } from '../enums'
+import { ChainId } from "../enums";
 
 export const NATIVE = {
   [ChainId.MAINNET]: Ether.onChain(ChainId.MAINNET),
@@ -21,6 +23,8 @@ export const NATIVE = {
   [ChainId.RINKEBY]: Ether.onChain(ChainId.RINKEBY),
   [ChainId.GÖRLI]: Ether.onChain(ChainId.GÖRLI),
   [ChainId.KOVAN]: Ether.onChain(ChainId.KOVAN),
+  [ChainId.SHIBUYA]: Shibuya.onChain(ChainId.SHIBUYA),
+  [ChainId.SHIDEN]: Shiden.onChain(ChainId.SHIDEN),
   [ChainId.FANTOM]: Fantom.onChain(ChainId.FANTOM),
   [ChainId.FANTOM_TESTNET]: Fantom.onChain(ChainId.FANTOM_TESTNET),
   [ChainId.MATIC]: Matic.onChain(ChainId.MATIC),
@@ -41,4 +45,4 @@ export const NATIVE = {
   [ChainId.CELO]: Celo.onChain(ChainId.CELO),
   [ChainId.PALM]: Palm.onChain(ChainId.PALM),
   [ChainId.MOONRIVER]: Movr.onChain(ChainId.MOONRIVER)
-}
+};

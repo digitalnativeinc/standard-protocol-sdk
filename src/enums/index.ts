@@ -5,3 +5,4 @@ export { KashiAction } from "./KashiAction";
 export { Fee } from "./Fee";
 export { OrderStatus } from "./OrderStatus";
 export { Protocol } from "./Protocol";
+export { Contract } from "./Contract";
