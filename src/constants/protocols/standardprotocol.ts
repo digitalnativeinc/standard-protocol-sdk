@@ -8,7 +8,7 @@ export const STANDARD_PROTOCOL: ProtocolMap = {
     [ChainId.ROPSTEN]: "0xa41A122F29ebfB4c36C8D8B3C008C8C71102Ade0",
     [ChainId.GÖRLI]: "0xc35DADB65012eC5796536bD9864eD8773aBc74C4",
     [ChainId.KOVAN]: "0x414e4EDB62e8C95BA4E10703c49AC20533E6CcCe",
-    [ChainId.SHIBUYA]: "0xC772beE7a81603ba192A68cAaa85f3364ab56673",
+    [ChainId.SHIBUYA]: "0x892751F2862C2cdac710F0bc7E9fa8b887B86458",
     [ChainId.FANTOM]: "0xc35DADB65012eC5796536bD9864eD8773aBc74C4",
     [ChainId.FANTOM_TESTNET]: "",
     [ChainId.MATIC]: "0xc35DADB65012eC5796536bD9864eD8773aBc74C4",
@@ -38,7 +38,7 @@ export const STANDARD_PROTOCOL: ProtocolMap = {
     [ChainId.ROPSTEN]: "0x264df23E4E62BB0d47473e853ab3f0E1e6193425",
     [ChainId.GÖRLI]: "0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506",
     [ChainId.KOVAN]: "0xDC4E3be13CD73BAC3C22489D224726d1Aa1B714e",
-    [ChainId.SHIBUYA]: "0xF6caa02D740F19EE369067d523bcc09915dC63FB",
+    [ChainId.SHIBUYA]: "0x8A0AffcE780Ca0C4017F930d0C661496f5Cd71c0",
     [ChainId.FANTOM]: "0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506",
     [ChainId.FANTOM_TESTNET]: "",
     [ChainId.MATIC]: "0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506",
@@ -65,9 +65,39 @@ export const STANDARD_PROTOCOL: ProtocolMap = {
   INIT_CODE_HASH: {
     FACTORY: {
       [ChainId.RINKEBY]:
-        "0x400b690d2efa8c402b5815ad383f40b9addb7cba77d78f67bf23ec6412353797",
+        "0x4af3e365808e8c2f95b8575d24129af95ff5e67b36ce008fc5e2f00f91fb43e3",
       [ChainId.SHIBUYA]:
-        "0x51f97ce54c57c86ea75be4f04e6978cde4a4ad39b7a3bbc6506713b57f9ce0c0"
+        "0xca06c48270cf1ead7b7481ee4138319ad78b7a59c683b6ef8168a180ca72ab1c"
     }
+  },
+  DIVIDEND_ADDRESS: {
+    [ChainId.MAINNET]: "",
+    [ChainId.RINKEBY]: "",
+    [ChainId.ROPSTEN]: "",
+    [ChainId.GÖRLI]: "",
+    [ChainId.KOVAN]: "",
+    [ChainId.SHIBUYA]: "0x00151c5D442A5F368E0F4Cb19a390452d5cb1640",
+    [ChainId.FANTOM]: "",
+    [ChainId.FANTOM_TESTNET]: "",
+    [ChainId.MATIC]: "",
+    [ChainId.MATIC_TESTNET]: "",
+    [ChainId.XDAI]: "",
+    [ChainId.BSC]: "",
+    [ChainId.BSC_TESTNET]: "",
+    [ChainId.ARBITRUM]: "",
+    [ChainId.ARBITRUM_TESTNET]: "",
+    [ChainId.MOONBEAM_TESTNET]: "",
+    [ChainId.AVALANCHE]: "",
+    [ChainId.AVALANCHE_TESTNET]: "",
+    [ChainId.HECO]: "",
+    [ChainId.HECO_TESTNET]: "",
+    [ChainId.HARMONY]: "",
+    [ChainId.HARMONY_TESTNET]: "",
+    [ChainId.OKEX]: "",
+    [ChainId.OKEX_TESTNET]: "",
+    [ChainId.CELO]: "",
+    [ChainId.PALM]: "",
+    [ChainId.PALM_TESTNET]: "",
+    [ChainId.MOONRIVER]: ""
   }
 };
