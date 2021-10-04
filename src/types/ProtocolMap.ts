@@ -6,4 +6,5 @@ export type ProtocolMap = {
   MASTER_POOL_ADDRESS?: AddressMap;
   INIT_CODE_HASH: { FACTORY: AddressMap };
   DIVIDEND_ADDRESS?: AddressMap;
+  MASTERPOOL_ADDRESS?:AddressMap;
 };
