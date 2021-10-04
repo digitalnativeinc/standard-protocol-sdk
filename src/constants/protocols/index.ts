@@ -6,6 +6,9 @@ export const PROTOCOLS = {
   STANDARD_PROTOCOL,
   SUSHISWAP
 };
+export const getDividendPoolAddress = (protocol: Protocol, chainId: number) => {
+  return PROTOCOLS[protocol]?.DIVIDEND_POOL_ADDRESS?.[chainId];
+};
 
 export const getFactoryAddress = (protocol: Protocol, chainId: number) => {
   return PROTOCOLS[protocol].FACTORY_ADDRESS[chainId];
