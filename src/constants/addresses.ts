@@ -537,7 +537,7 @@ export const WNATIVE_ADDRESS: AddressMap = {
 // move to protocol later on
 export const MASTERCHEF_V2_ADDRESS: AddressMap = {
   [ChainId.MAINNET]: "0xbdb48F515C5DF89cd27128b3dc5B2d912F0EA0C2",
-  [ChainId.RINKEBY]: "0x4Fc7508D6b76EF7Ee59633FFdAc4759F4FA30ea5"
+  [ChainId.RINKEBY]: "0x709cFF0d8d5e8fA20a9Da637f49D28844aeE067E"
 };
 
 export const ENS_REGISTRAR_ADDRESS: AddressMap = {

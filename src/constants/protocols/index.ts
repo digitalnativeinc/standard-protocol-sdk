@@ -6,6 +6,12 @@ export const PROTOCOLS = {
   STANDARD_PROTOCOL,
   SUSHISWAP
 };
+export const getDividendPoolWhitelist = (
+  protocol: Protocol,
+  chainId: number
+) => {
+  return PROTOCOLS[protocol]?.DIVIDEND_POOL_WHITELIST?.[chainId];
+};
 export const getDividendPoolAddress = (protocol: Protocol, chainId: number) => {
   return PROTOCOLS[protocol]?.DIVIDEND_POOL_ADDRESS?.[chainId];
 };
