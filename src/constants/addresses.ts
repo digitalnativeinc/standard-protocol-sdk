@@ -81,6 +81,7 @@ export const STND_ADDRESS: AddressMap = {
   [ChainId.ROPSTEN]: "",
   [ChainId.RINKEBY]: "0xC8aEEDb09f4d90d59eE47fEd8c70D10Fd267b2ab",
   [ChainId.SHIBUYA]: "0xB0a1AA4CB76c0e35d9Ac9eba422bF76534Bf155A",
+  [ChainId.SHIDEN]: "0x722377A047e89CA735f09Eb7CccAb780943c4CB4",
   [ChainId.GÖRLI]: "",
   [ChainId.KOVAN]: "",
   [ChainId.FANTOM]: "",
@@ -537,7 +538,9 @@ export const WNATIVE_ADDRESS: AddressMap = {
 // move to protocol later on
 export const MASTERCHEF_V2_ADDRESS: AddressMap = {
   [ChainId.MAINNET]: "0xbdb48F515C5DF89cd27128b3dc5B2d912F0EA0C2",
-  [ChainId.RINKEBY]: "0x22079B36Af1AB814350fff725CD8F67f3C70b753"
+  [ChainId.RINKEBY]: "0x22079B36Af1AB814350fff725CD8F67f3C70b753",
+  [ChainId.SHIBUYA]: "0xbd06347154BB07FE9c2fba66659AE96DB39B8E87",
+  [ChainId.SHIDEN]: "0xe78c60C7a36E7b948a5C6cFF8D800F6a2727C93d"
 };
 
 export const ENS_REGISTRAR_ADDRESS: AddressMap = {
