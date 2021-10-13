@@ -1,7 +1,7 @@
 {
   "name": "@digitalnative/standard-protocol-sdk",
   "license": "MIT",
-  "version": "0.0.100",
+  "version": "0.0.101",
   "description": "🛠 An SDK for building applications on top of Standard Protocol.",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
