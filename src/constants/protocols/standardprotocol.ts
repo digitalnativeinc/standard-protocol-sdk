@@ -69,6 +69,8 @@ export const STANDARD_PROTOCOL: ProtocolMap = {
       [ChainId.RINKEBY]:
         "0x58b6b98149f255c091cb484ebd5bb0ed5aff4516a67cf1551ce2ba53d69e7a8c",
       [ChainId.SHIBUYA]:
+        "0x324d7ced3a19bff8f7a62f474e7d22b44450225b20944731595e8e252d3784bd",
+      [ChainId.SHIDEN]:
         "0x324d7ced3a19bff8f7a62f474e7d22b44450225b20944731595e8e252d3784bd"
     }
   },

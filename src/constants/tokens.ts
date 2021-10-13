@@ -134,6 +134,13 @@ export const WETH9: TokenMap = {
     "WETH",
     "Wrapped Ether"
   ),
+  [ChainId.SHIDEN]: new Token(
+    ChainId.SHIBUYA,
+    WETH9_ADDRESS[ChainId.SHIDEN],
+    18,
+    "WETH",
+    "Wrapped Ether"
+  ),
   [ChainId.ARBITRUM]: new Token(
     ChainId.ARBITRUM,
     WETH9_ADDRESS[ChainId.ARBITRUM],
