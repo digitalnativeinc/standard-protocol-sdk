@@ -13,18 +13,20 @@ export class Token extends AbstractCurrency {
 
   public readonly isNative: false = false;
   public readonly isToken: true = true;
-  public readonly isAnyswap: false = false;
+  public readonly isAnyswap: boolean;
 
   public constructor(
     chainId: ChainId,
     address: string,
     decimals: number,
     symbol?: string,
-    name?: string
+    name?: string,
+    isAnyswap: boolean = false
   ) {
     super(chainId, decimals, symbol, name);
     this.chainId = chainId;
     this.address = validateAndParseAddress(address);
+    this.isAnyswap = isAnyswap;
   }
 
   /**
