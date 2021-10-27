@@ -21,12 +21,12 @@ export class Token extends AbstractCurrency {
     decimals: number,
     symbol?: string,
     name?: string,
-    isAnyswap: boolean = false
+    isAnyswap?: boolean
   ) {
     super(chainId, decimals, symbol, name);
     this.chainId = chainId;
     this.address = validateAndParseAddress(address);
-    this.isAnyswap = isAnyswap;
+    this.isAnyswap = !!isAnyswap;
   }
 
   /**

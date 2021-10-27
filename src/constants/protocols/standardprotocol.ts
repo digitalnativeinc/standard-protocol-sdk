@@ -93,6 +93,7 @@ export const STANDARD_PROTOCOL: ProtocolMap = {
         token1: "0xB0a1AA4CB76c0e35d9Ac9eba422bF76534Bf155A"
       }
     ],
+    [ChainId.SHIDEN]: [],
     [ChainId.FANTOM]: [],
     [ChainId.FANTOM_TESTNET]: [],
     [ChainId.MATIC]: [],
@@ -123,7 +124,7 @@ export const STANDARD_PROTOCOL: ProtocolMap = {
     [ChainId.GÖRLI]: "",
     [ChainId.KOVAN]: "",
     [ChainId.SHIBUYA]: "0x368ea929c4B871BF68678cDF07ABB7e4bC9e59c3",
-    [ChainId.SHIDEN]: "0x52C26847130EC1D8e25Dec3d77262365e58a6f5C",
+    [ChainId.SHIDEN]: "0x670Cf2628816d95b36B1A4Db2dfba80eaEBd7b78",
     [ChainId.FANTOM]: "",
     [ChainId.FANTOM_TESTNET]: "",
     [ChainId.MATIC]: "",
