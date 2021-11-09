@@ -66,6 +66,8 @@ export const STANDARD_PROTOCOL: ProtocolMap = {
   },
   INIT_CODE_HASH: {
     FACTORY: {
+      [ChainId.MAINNET]:
+        "0x914b7167277393b1c321f92b1b4746aaee9273174bc623118623f8dc4ba6c2d4",
       [ChainId.RINKEBY]:
         "0x58b6b98149f255c091cb484ebd5bb0ed5aff4516a67cf1551ce2ba53d69e7a8c",
       [ChainId.SHIBUYA]:
