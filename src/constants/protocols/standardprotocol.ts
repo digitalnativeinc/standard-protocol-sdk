@@ -75,83 +75,95 @@ export const STANDARD_PROTOCOL: ProtocolMap = {
     }
   },
   DIVIDEND_POOL_WHITELIST: {
-    [ChainId.MAINNET]: [],
-    [ChainId.RINKEBY]: [
-      {
-        address: "0x5ea23619fe6d692963e86574d9d1c798f4fc1626",
-        token0: "0xc778417e063141139fce010982780140aa0cd5ab",
-        token1: "0xc7ad46e0b8a400bb3c915120d284aafba8fc4735"
-      }
-    ],
-    [ChainId.ROPSTEN]: [],
-    [ChainId.GÖRLI]: [],
-    [ChainId.KOVAN]: [],
-    [ChainId.SHIBUYA]: [
-      {
-        address: "0x7c0D5aEDFA1AF74C75362CcA3608159A61A4d80c",
-        token0: "0x321F318e7C276c93Cf3094fd3a9d7c4362fd19FB",
-        token1: "0xB0a1AA4CB76c0e35d9Ac9eba422bF76534Bf155A"
-      }
-    ],
-    [ChainId.SHIDEN]: [
-      {
-        address: "0x9B2814756fb9D9aB1E60324baD4686Fdd66d93fd",
-        token0: "0x0f933Dc137D21cA519ae4C7E93f87a4C8EF365Ef",
-        token1: "0x332730a4F6E03D9C55829435f10360E13cfA41Ff"
-      },
-      {
-        address: "0x1EaB04c15dca24bEa6c29f545D630Ce9392C0d3d",
-        token0: "0x0f933Dc137D21cA519ae4C7E93f87a4C8EF365Ef",
-        token1: "0x65e66a61D0a8F1e686C2D6083ad611a10D84D97A"
-      },
-      {
-        address: "0xBc14873c7daeB1887950083030AFd2FF9C9B20a0",
-        token0: "0x0f933Dc137D21cA519ae4C7E93f87a4C8EF365Ef",
-        token1: "0x722377A047e89CA735f09Eb7CccAb780943c4CB4"
-      },
-      {
-        address: "0xa6f213f63973c2815fa9C8079965f933694a3251",
-        token0: "0x722377A047e89CA735f09Eb7CccAb780943c4CB4",
-        token1: "0xfA9343C3897324496A05fC75abeD6bAC29f8A40f"
-      },
-      {
-        address: "0x1A313816bFEbe895C92514f3049f82166B723003",
-        token0: "0x0f933Dc137D21cA519ae4C7E93f87a4C8EF365Ef",
-        token1: "0xfA9343C3897324496A05fC75abeD6bAC29f8A40f"
-      },
-      {
-        address: "0x0B754a6E8213410E702fFd49f3cd4e812E09058f",
-        token0: "0x0f933Dc137D21cA519ae4C7E93f87a4C8EF365Ef",
-        token1: "0x818ec0A7Fe18Ff94269904fCED6AE3DaE6d6dC0b"
-      },
-      {
-        address: "0xCFd26d28d13B201f8431a9511AEE790B6800559D",
-        token0: "0x0f933Dc137D21cA519ae4C7E93f87a4C8EF365Ef",
-        token1: "0x922D641a426DcFFaeF11680e5358F34d97d112E1"
-      }
-    ],
-    [ChainId.FANTOM]: [],
-    [ChainId.FANTOM_TESTNET]: [],
-    [ChainId.MATIC]: [],
-    [ChainId.MATIC_TESTNET]: [],
-    [ChainId.XDAI]: [],
-    [ChainId.BSC]: [],
-    [ChainId.BSC_TESTNET]: [],
-    [ChainId.ARBITRUM]: [],
-    [ChainId.ARBITRUM_TESTNET]: [],
-    [ChainId.MOONBEAM_TESTNET]: [],
-    [ChainId.AVALANCHE]: [],
-    [ChainId.AVALANCHE_TESTNET]: [],
-    [ChainId.HECO]: [],
-    [ChainId.HECO_TESTNET]: [],
-    [ChainId.HARMONY]: [],
-    [ChainId.HARMONY_TESTNET]: [],
-    [ChainId.OKEX]: [],
-    [ChainId.OKEX_TESTNET]: [],
-    [ChainId.CELO]: [],
-    [ChainId.PALM]: [],
-    [ChainId.PALM_TESTNET]: [],
-    [ChainId.MOONRIVER]: []
+    [ChainId.MAINNET]: {
+      pairs: [],
+      tokens: []
+    },
+    [ChainId.RINKEBY]: {
+      pairs: [
+        {
+          address: "0x5ea23619fe6d692963e86574d9d1c798f4fc1626",
+          token0: "0xc778417e063141139fce010982780140aa0cd5ab",
+          token1: "0xc7ad46e0b8a400bb3c915120d284aafba8fc4735",
+          symbol: "LTR",
+          name: "Standard LTR Token"
+        }
+      ],
+      tokens: []
+    },
+    [ChainId.SHIBUYA]: {
+      pairs: [
+        {
+          address: "0x7c0D5aEDFA1AF74C75362CcA3608159A61A4d80c",
+          token0: "0x321F318e7C276c93Cf3094fd3a9d7c4362fd19FB",
+          token1: "0xB0a1AA4CB76c0e35d9Ac9eba422bF76534Bf155A",
+          symbol: "LTR",
+          name: "Standard LTR Token"
+        }
+      ],
+      tokens: []
+    },
+    [ChainId.SHIDEN]: {
+      pairs: [
+        {
+          address: "0x9B2814756fb9D9aB1E60324baD4686Fdd66d93fd",
+          token0: "0x0f933Dc137D21cA519ae4C7E93f87a4C8EF365Ef",
+          token1: "0x332730a4F6E03D9C55829435f10360E13cfA41Ff",
+          symbol: "WSDN/BNB",
+          name: "WSDN-BNB LTR Token"
+        },
+        {
+          address: "0x1EaB04c15dca24bEa6c29f545D630Ce9392C0d3d",
+          token0: "0x0f933Dc137D21cA519ae4C7E93f87a4C8EF365Ef",
+          token1: "0x65e66a61D0a8F1e686C2D6083ad611a10D84D97A",
+          symbol: "WSDN/BUSD",
+          name: "WSDN-BUSD LTR Token"
+        },
+        {
+          address: "0xBc14873c7daeB1887950083030AFd2FF9C9B20a0",
+          token0: "0x0f933Dc137D21cA519ae4C7E93f87a4C8EF365Ef",
+          token1: "0x722377A047e89CA735f09Eb7CccAb780943c4CB4",
+          symbol: "WSDN/STND",
+          name: "WSDN-STND LTR Token"
+        },
+        {
+          address: "0xa6f213f63973c2815fa9C8079965f933694a3251",
+          token0: "0x722377A047e89CA735f09Eb7CccAb780943c4CB4",
+          token1: "0xfA9343C3897324496A05fC75abeD6bAC29f8A40f",
+          symbol: "STND/USDC",
+          name: "STND-USDC LTR Token"
+        },
+        {
+          address: "0x1A313816bFEbe895C92514f3049f82166B723003",
+          token0: "0x0f933Dc137D21cA519ae4C7E93f87a4C8EF365Ef",
+          token1: "0xfA9343C3897324496A05fC75abeD6bAC29f8A40f",
+          symbol: "WSDN/USDC",
+          name: "WSDN-USDC LTR Token"
+        },
+        {
+          address: "0x0B754a6E8213410E702fFd49f3cd4e812E09058f",
+          token0: "0x0f933Dc137D21cA519ae4C7E93f87a4C8EF365Ef",
+          token1: "0x818ec0A7Fe18Ff94269904fCED6AE3DaE6d6dC0b",
+          symbol: "WSDN/USDT",
+          name: "WSDN-USDT LTR Token"
+        },
+        {
+          address: "0xCFd26d28d13B201f8431a9511AEE790B6800559D",
+          token0: "0x0f933Dc137D21cA519ae4C7E93f87a4C8EF365Ef",
+          token1: "0x922D641a426DcFFaeF11680e5358F34d97d112E1",
+          symbol: "WSDN/WBTC",
+          name: "WSDN-WBTC LTR Token"
+        }
+      ],
+      tokens: [
+        {
+          address: "0x0f933Dc137D21cA519ae4C7E93f87a4C8EF365Ef",
+          decimals: 18,
+          symbol: "WSDN",
+          name: "Wrapped Shiden"
+        }
+      ]
+    }
   },
   DIVIDEND_POOL_ADDRESS: {
     [ChainId.MAINNET]: "",

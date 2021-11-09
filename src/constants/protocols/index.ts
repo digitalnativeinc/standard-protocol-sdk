@@ -12,6 +12,21 @@ export const getDividendPoolWhitelist = (
 ) => {
   return PROTOCOLS[protocol]?.DIVIDEND_POOL_WHITELIST?.[chainId];
 };
+
+export const getDividendPoolWhitelistPairs = (
+  protocol: Protocol,
+  chainId: number
+) => {
+  return PROTOCOLS[protocol]?.DIVIDEND_POOL_WHITELIST?.[chainId]?.pairs;
+};
+
+export const getDividendPoolWhitelistTokens = (
+  protocol: Protocol,
+  chainId: number
+) => {
+  return PROTOCOLS[protocol]?.DIVIDEND_POOL_WHITELIST?.[chainId]?.tokens;
+};
+
 export const getDividendPoolAddress = (protocol: Protocol, chainId: number) => {
   return PROTOCOLS[protocol]?.DIVIDEND_POOL_ADDRESS?.[chainId];
 };
