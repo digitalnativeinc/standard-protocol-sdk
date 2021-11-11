@@ -43,6 +43,10 @@ export const getMasterPoolAddress = (protocol: Protocol, chainId: number) => {
   return PROTOCOLS[protocol].MASTER_POOL_ADDRESS?.[chainId];
 };
 
+export const getXStndAddress = (protocol: Protocol, chainId: number) => {
+  return PROTOCOLS[protocol]?.XSTND_ADDRESS?.[chainId];
+};
+
 export const getInitCodeHash = (
   protocol: Protocol,
   chainId: number,

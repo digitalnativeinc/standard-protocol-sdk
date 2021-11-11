@@ -2,6 +2,9 @@ import { ProtocolMap } from "types/ProtocolMap";
 import { ChainId } from "../../enums";
 
 export const STANDARD_PROTOCOL: ProtocolMap = {
+  XSTND_ADDRESS: {
+    [ChainId.SHIDEN]: "0xfC76114C5AdeBfa257153eA82b8594C3B25baebe"
+  },
   FACTORY_ADDRESS: {
     [ChainId.MAINNET]: "0xbf4Dd73c9f90E9F2dDBa56933cEd7EafdF56a8A9",
     [ChainId.RINKEBY]: "0xF659492744608B595670c1508aa0F5b92B84B94d",
