@@ -19,12 +19,12 @@ export class AnyswapCurrencyAmount extends Fraction {
    * Helper that calls the constructor with the ETHER currency
    * @param amount ether amount in wei
    */
-  public static ether(amount: BigintIsh): AnyswapCurrencyAmount {
+  public static ether(amount: BigintIsh | bigint): AnyswapCurrencyAmount {
     return new AnyswapCurrencyAmount(ETHER, amount);
   }
 
   // amount _must_ be raw, i.e. in the native representation
-  protected constructor(currency: AnyswapCurrency, amount: BigintIsh) {
+  protected constructor(currency: AnyswapCurrency, amount: BigintIsh | bigint) {
     const parsedAmount = parseBigintIsh(amount);
     validateSolidityTypeInstance(parsedAmount, SolidityType.uint256);
 

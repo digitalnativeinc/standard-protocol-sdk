@@ -1,7 +1,7 @@
 import JSBI from "jsbi";
 import { BigintIsh } from "../types";
 
-export function parseBigintIsh(bigintIsh: BigintIsh): JSBI {
+export function parseBigintIsh(bigintIsh: BigintIsh | bigint): JSBI {
   return bigintIsh instanceof JSBI
     ? bigintIsh
     : typeof bigintIsh === "bigint"
