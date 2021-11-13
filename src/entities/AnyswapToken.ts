@@ -1,4 +1,4 @@
-import { NativeCurrency, Token } from "entities";
+import { Token } from "entities";
 import { ChainId } from "enums";
 import { validateAndParseAddress } from "functions";
 import invariant from "tiny-invariant";
