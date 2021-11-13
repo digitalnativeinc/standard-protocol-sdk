@@ -86,7 +86,7 @@ export class AnyswapToken extends AnyswapCurrency {
 /**
  * Compares two currencies for equality
  */
-export function currencyEquals(
+export function anyswapCurrencyEquals(
   currencyA: AnyswapCurrency,
   currencyB: AnyswapCurrency
 ): boolean {
