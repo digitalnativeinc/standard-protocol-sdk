@@ -1,5 +1,5 @@
-import { validateSolidityTypeInstance } from "functions";
 import JSBI from "jsbi";
+import { validateSolidityTypeInstance } from "../functions";
 
 import { SolidityType } from "../constants";
 

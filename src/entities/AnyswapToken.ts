@@ -1,7 +1,7 @@
-import { Token } from "entities";
-import { ChainId } from "../enums";
-import { validateAndParseAddress } from "functions";
 import invariant from "tiny-invariant";
+import { Token } from "../entities";
+import { ChainId } from "../enums";
+import { validateAndParseAddress } from "../functions";
 import { AnyswapCurrency } from "./AnyswapCurrency";
 
 /**
