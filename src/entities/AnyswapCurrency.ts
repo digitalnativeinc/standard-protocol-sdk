@@ -2,6 +2,7 @@ import JSBI from "jsbi";
 import { validateSolidityTypeInstance } from "../functions";
 
 import { SolidityType } from "../constants";
+import { Token } from "./Token";
 
 /**
  * A currency is any fungible financial instrument on Ethereum, including Ether and all ERC20 tokens.
@@ -69,6 +70,18 @@ export class AnyswapCurrency {
     this.tokenid = tokenid;
     this.version = version;
     this.routerToken = routerToken;
+  }
+
+  public toCurrency(): Token | undefined {
+    if (this.name === "BASECURRENCY") return undefined;
+    return new Token(
+      this.chainId,
+      this.address ?? "",
+      this.decimals,
+      this.symbol,
+      this.name,
+      true
+    );
   }
 }
 
