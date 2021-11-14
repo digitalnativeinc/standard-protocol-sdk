@@ -3,6 +3,7 @@ import { validateSolidityTypeInstance } from "../functions";
 
 import { SolidityType } from "../constants";
 import { Token } from "./Token";
+import { ChainId } from "enums";
 
 /**
  * A currency is any fungible financial instrument on Ethereum, including Ether and all ERC20 tokens.
@@ -15,7 +16,7 @@ export class AnyswapCurrency {
   public readonly symbol?: string;
   public readonly name?: string;
   public readonly underlying?: any;
-  public readonly chainId?: any;
+  public readonly chainId?: ChainId;
 
   public readonly ContractVersion?: any;
   public readonly destChains?: any;
@@ -47,7 +48,7 @@ export class AnyswapCurrency {
     symbol?: string,
     name?: string,
     underlying?: any,
-    chainId?: any,
+    chainId?: ChainId,
     ContractVersion?: any,
     destChains?: any,
     logoUrl?: any,
@@ -73,7 +74,9 @@ export class AnyswapCurrency {
   }
 
   public toCurrency(): Token | undefined {
-    if (this.name === "BASECURRENCY") return undefined;
+    // base currency
+    if (this.chainId === undefined) return undefined;
+    // chainid and address will always be present
     return new Token(
       this.chainId,
       this.address ?? "",
