@@ -104,7 +104,8 @@ export const STND_ADDRESS: AddressMap = {
   [ChainId.OKEX_TESTNET]: "",
   [ChainId.CELO]: "",
   [ChainId.PALM]: "",
-  [ChainId.PALM_TESTNET]: ""
+  [ChainId.PALM_TESTNET]: "",
+  [ChainId.METIS]: "0xc12caC7090baa48Ec750CceeC57C80768F6ee58E",
 };
 
 export const SUSHI_ADDRESS: AddressMap = {
@@ -541,7 +542,8 @@ export const MASTERCHEF_V2_ADDRESS: AddressMap = {
   [ChainId.MAINNET]: "0xb9112FEeF2054Acc4066c40e8C2784fA3e9d032F",
   [ChainId.RINKEBY]: "0x22079B36Af1AB814350fff725CD8F67f3C70b753",
   [ChainId.SHIBUYA]: "0x82602a7c72a12E721B5d44CA1E9503a049a6Df0C",
-  [ChainId.SHIDEN]: "0x375eC65e75083Ee8545fA9168257Ac2a456DDAbb"
+  [ChainId.SHIDEN]: "0x375eC65e75083Ee8545fA9168257Ac2a456DDAbb",
+  [ChainId.METIS]: "0x23423292396A37C0c2e4d384dCe7ab67738BeC28",
 };
 
 export const ENS_REGISTRAR_ADDRESS: AddressMap = {
