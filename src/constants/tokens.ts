@@ -135,7 +135,7 @@ export const WETH9: TokenMap = {
     "Wrapped Ether"
   ),
   [ChainId.SHIDEN]: new Token(
-    ChainId.SHIBUYA,
+    ChainId.SHIDEN,
     WETH9_ADDRESS[ChainId.SHIDEN],
     18,
     "WETH",
@@ -207,6 +207,13 @@ export const WETH9: TokenMap = {
   [ChainId.AVALANCHE]: new Token(
     ChainId.AVALANCHE,
     WETH9_ADDRESS[ChainId.AVALANCHE],
+    18,
+    "WETH",
+    "Wrapped Ether"
+  ),
+  [ChainId.METIS]: new Token(
+    ChainId.METIS,
+    WETH9_ADDRESS[ChainId.METIS],
     18,
     "WETH",
     "Wrapped Ether"
@@ -367,5 +374,12 @@ export const WNATIVE: TokenMap = {
     18,
     "WMOVR",
     "Wrapped Moonriver"
+  ),
+  [ChainId.METIS]: new Token(
+    ChainId.METIS,
+    WNATIVE_ADDRESS[ChainId.METIS],
+    18,
+    "WMETIS",
+    "Wrapped Metis"
   )
 };

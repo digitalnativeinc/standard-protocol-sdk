@@ -12,7 +12,8 @@ import {
   Palm,
   Shibuya,
   Shiden,
-  xDai
+  xDai,
+  Metis
 } from "../entities/Native";
 
 import { ChainId } from "../enums";
@@ -44,5 +45,6 @@ export const NATIVE = {
   [ChainId.OKEX_TESTNET]: Okex.onChain(ChainId.OKEX_TESTNET),
   [ChainId.CELO]: Celo.onChain(ChainId.CELO),
   [ChainId.PALM]: Palm.onChain(ChainId.PALM),
-  [ChainId.MOONRIVER]: Movr.onChain(ChainId.MOONRIVER)
+  [ChainId.MOONRIVER]: Movr.onChain(ChainId.MOONRIVER),
+  [ChainId.METIS]: Metis.onChain(ChainId.METIS)
 };
