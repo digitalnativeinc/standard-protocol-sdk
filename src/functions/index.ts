@@ -1,4 +1,4 @@
-export { computePairAddress } from "./computePairAddress";
+export { computePairAddress, computePairAddress2 } from "./computePairAddress";
 export { computePriceImpact } from "./computePriceImpact";
 export { computeConstantProductPoolAddress } from "./computeConstantProductPoolAddress";
 export { computePoolInitCodeHash } from "./computePoolInitCodeHash";
