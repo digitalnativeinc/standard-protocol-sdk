@@ -83,7 +83,9 @@ export const STANDARD_PROTOCOL: ProtocolMap = {
       [ChainId.SHIDEN]:
         "0xc36a317d9baf1012b39130a243b15514920fc5cd09455f3de79de6d42243ec61",
       [ChainId.METIS]:
-        "0x8bcf059a21f224a4f11cd79db7af2336bcfa78b32a21860b32ec9c4d5c203c9c"
+        "0x8bcf059a21f224a4f11cd79db7af2336bcfa78b32a21860b32ec9c4d5c203c9c",
+      [ChainId.AVALANCHE]:
+        "0x7e04244d6def5db4d9575396acff5f6d26e3ce221a453f971bbdf3ef903e0635"
     }
   },
   DIVIDEND_POOL_WHITELIST: {
