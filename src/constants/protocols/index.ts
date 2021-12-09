@@ -47,6 +47,22 @@ export const getXStndAddress = (protocol: Protocol, chainId: number) => {
   return PROTOCOLS[protocol]?.XSTND_ADDRESS?.[chainId];
 };
 
+export const getMtrAddress = (protocol: Protocol, chainId: number) => {
+  return PROTOCOLS[protocol]?.METER_ADDRESS?.[chainId];
+};
+
+export const getV1Address = (protocol: Protocol, chainId: number) => {
+  return PROTOCOLS[protocol]?.V1_ADDRESS?.[chainId];
+};
+
+export const getVaultManagerAddress = (protocol: Protocol, chainId: number) => {
+  return PROTOCOLS[protocol]?.VAULT_MANAGER_ADDRESS?.[chainId];
+};
+
+export const getVaultOracleAddress = (protocol: Protocol, chainId: number) => {
+  return PROTOCOLS[protocol]?.VAULT_ORACLE_ADDRESS?.[chainId];
+};
+
 export const getInitCodeHash = (
   protocol: Protocol,
   chainId: number,

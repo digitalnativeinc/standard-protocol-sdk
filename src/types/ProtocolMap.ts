@@ -9,4 +9,8 @@ export type ProtocolMap = {
   DIVIDEND_POOL_ADDRESS?: AddressMap;
   MASTER_POOL_ADDRESS?: AddressMap;
   DIVIDEND_POOL_WHITELIST?: DividendWhitelistArrayMap;
+  METER_ADDRESS?: AddressMap;
+  VAULT_MANAGER_ADDRESS?: AddressMap;
+  V1_ADDRESS?: AddressMap;
+  VAULT_ORACLE_ADDRESS?: AddressMap;
 };

@@ -2,6 +2,18 @@ import { ProtocolMap } from "types/ProtocolMap";
 import { ChainId } from "../../enums";
 
 export const STANDARD_PROTOCOL: ProtocolMap = {
+  V1_ADDRESS: {
+    [ChainId.SHIDEN]: "0xe599c731e9972C052Cae218E8Ef5943B7013410C"
+  },
+  VAULT_MANAGER_ADDRESS: {
+    [ChainId.SHIDEN]: "0xfea4B623805bCF3D2863894e7437187aaDE26573"
+  },
+  METER_ADDRESS: {
+    [ChainId.SHIDEN]: "0xa2E422129C27f77635D10edCcc111e7F8d0a921d"
+  },
+  VAULT_ORACLE_ADDRESS: {
+    [ChainId.SHIDEN]: "0xCcf56fb87850fe6cfF0cD16f491933c138B7EaDD"
+  },
   XSTND_ADDRESS: {
     [ChainId.MAINNET]: "0xAd41F311C835224447c54C98fADf5E0AD9Eff077",
     [ChainId.SHIDEN]: "0xfC76114C5AdeBfa257153eA82b8594C3B25baebe",
