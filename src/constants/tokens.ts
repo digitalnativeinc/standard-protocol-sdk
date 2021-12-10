@@ -217,6 +217,13 @@ export const WETH9: TokenMap = {
     18,
     "WETH",
     "Wrapped Ether"
+  ),
+  [ChainId.EVMOS]: new Token(
+    ChainId.EVMOS,
+    WETH9_ADDRESS[ChainId.EVMOS],
+    18,
+    "WETH",
+    "Wrapped Ether"
   )
 };
 
@@ -381,5 +388,12 @@ export const WNATIVE: TokenMap = {
     18,
     "WMETIS",
     "Wrapped Metis"
+  ),
+  [ChainId.EVMOS]: new Token(
+    ChainId.EVMOS,
+    WNATIVE_ADDRESS[ChainId.EVMOS],
+    18,
+    "WPHOTON",
+    "Wrapped Photon"
   )
 };

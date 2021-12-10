@@ -14,3 +14,4 @@ export { Palm } from "./Palm";
 export { Shibuya } from "./Shibuya";
 export { Shiden } from "./Shiden";
 export { Metis } from "./Metis";
+export { Photon } from "./Photon";
