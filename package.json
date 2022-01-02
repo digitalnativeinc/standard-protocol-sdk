@@ -1,10 +1,16 @@
 {
   "name": "@digitalnative/standard-protocol-sdk",
   "license": "MIT",
-  "version": "0.0.157",
+  "version": "0.0.161",
   "description": "🛠 An SDK for building applications on top of Standard Protocol.",
-  "main": "dist/index.js",
+  "main": "dist/index.cjs",
+  "module": "./dist/index.module.js",
+  "source": "src/index.ts",
   "typings": "dist/index.d.ts",
+  "exports": {
+    "require": "./dist/index.js",
+    "default": "./dist/index.modern.js"
+  },
   "files": [
     "dist"
   ],
@@ -14,13 +20,12 @@
     "ethereum",
     "sdk"
   ],
-  "module": "dist/sdk.esm.js",
   "scripts": {
     "lint": "tsdx lint src test",
-    "build": "tsdx build",
-    "watch": "tsdx watch",
+    "build": "microbundle build",
+    "watch": "microbundle watch",
     "test": "tsdx testp",
-    "prepublishOnly": "tsdx build",
+    "prepublishOnly": "microbundle build",
     "prepare": "husky install",
     "prettier": "prettier --write 'src/**/*.ts' 'test/**/*.ts'",
     "publish": "yarn build && yarn publish"
@@ -66,6 +71,7 @@
     "babel-plugin-transform-jsbi-to-bigint": "^1.4.0",
     "eip-712": "^0.4.3",
     "husky": "^7.0.0",
+    "microbundle": "^0.14.2",
     "seedrandom": "^3.0.5",
     "tsdx": "^0.14.1"
   },

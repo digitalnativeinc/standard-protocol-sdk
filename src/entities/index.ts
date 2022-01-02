@@ -15,5 +15,4 @@ export * from "./Route";
 export * from "./Token";
 export * from "./Trade";
 export * from "./Native";
-export * from "./eip712";
 export * from "./MultiRouter";
