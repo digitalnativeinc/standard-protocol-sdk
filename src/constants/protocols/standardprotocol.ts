@@ -95,7 +95,7 @@ export const STANDARD_PROTOCOL: ProtocolMap = {
       [ChainId.MAINNET]:
         "0x914b7167277393b1c321f92b1b4746aaee9273174bc623118623f8dc4ba6c2d4",
       [ChainId.RINKEBY]:
-        "0x58b6b98149f255c091cb484ebd5bb0ed5aff4516a67cf1551ce2ba53d69e7a8c",
+        "0x8bcf059a21f224a4f11cd79db7af2336bcfa78b32a21860b32ec9c4d5c203c9c",
       [ChainId.SHIBUYA]:
         "0x324d7ced3a19bff8f7a62f474e7d22b44450225b20944731595e8e252d3784bd",
       [ChainId.SHIDEN]:
