@@ -1,7 +1,7 @@
 {
   "name": "@digitalnative/standard-protocol-sdk",
   "license": "MIT",
-  "version": "0.0.189",
+  "version": "0.0.190",
   "description": "🛠 An SDK for building applications on top of Standard Protocol.",
   "main": "dist/index.js",
   "module": "./dist/index.module.js",
@@ -30,11 +30,17 @@
     "prettier": "prettier --write 'src/**/*.ts' 'test/**/*.ts'",
     "publish": "yarn build && yarn publish"
   },
+  "config": {
+    "pre-git": {
+      "allow-untracked-files": false
+    }
+  },
   "dependencies": {
     "big.js": "^6.1.0",
     "decimal.js-light": "^2.5.0",
     "isomorphic-unfetch": "^3.1.0",
     "jsbi": "^3.1.0",
+    "pre-git": "^3.17.1",
     "tiny-invariant": "^1.1.0",
     "tiny-warning": "^1.0.3",
     "toformat": "^2.0.0"
