@@ -60,7 +60,7 @@ export const getVaultManagerAddress = (protocol: Protocol, chainId: number) => {
 };
 
 export const getDiaOracleAddress = (protocol: Protocol, chainId: number) => {
-  return PROTOCOLS[protocol]?.VAULT_ORACLE_ADDRESS?.[chainId];
+  return PROTOCOLS[protocol]?.DIA_ORACLE_ADDRESS?.[chainId];
 };
 
 export const getInitCodeHash = (
