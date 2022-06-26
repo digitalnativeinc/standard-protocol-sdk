@@ -8,7 +8,7 @@ import { BigintIsh } from "../types";
 import { Rounding } from "../enums";
 import { TEN, SolidityType } from "../constants";
 import { parseBigintIsh, validateSolidityTypeInstance } from "../functions";
-import { Fraction } from "./fraction";
+import { Fraction } from "./Fraction";
 
 const Big = toFormat(_Big);
 
