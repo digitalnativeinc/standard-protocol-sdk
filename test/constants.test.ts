@@ -1,4 +1,4 @@
-import { INIT_CODE_HASH } from "../src/constants";
+const INIT_CODE_HASH: string = '0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303'
 import { keccak256 } from "@ethersproject/solidity";
 
 // import { bytecode } from "@sushiswap/core/artifacts/contracts/uniswapv2/UniswapV2Pair.sol/UniswapV2Pair.json";

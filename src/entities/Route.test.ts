@@ -1,6 +1,7 @@
 import { CurrencyAmount, Ether, Pair, Route, Token } from "./index";
 
 import { WETH9 } from "../constants";
+import { Protocol } from "..";
 
 describe("Route", () => {
   const ETHER = Ether.onChain(1);
@@ -19,15 +20,18 @@ describe("Route", () => {
   const weth = WETH9[1];
   const pair_0_1 = new Pair(
     CurrencyAmount.fromRawAmount(token0, "100"),
-    CurrencyAmount.fromRawAmount(token1, "200")
+    CurrencyAmount.fromRawAmount(token1, "200"),
+    Protocol.SUSHISWAP
   );
   const pair_0_weth = new Pair(
     CurrencyAmount.fromRawAmount(token0, "100"),
-    CurrencyAmount.fromRawAmount(weth, "100")
+    CurrencyAmount.fromRawAmount(weth, "100"),
+    Protocol.SUSHISWAP
   );
   const pair_1_weth = new Pair(
     CurrencyAmount.fromRawAmount(token1, "175"),
-    CurrencyAmount.fromRawAmount(weth, "100")
+    CurrencyAmount.fromRawAmount(weth, "100"),
+    Protocol.SUSHISWAP
   );
 
   it("constructs a path from the tokens", () => {

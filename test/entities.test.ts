@@ -1,7 +1,7 @@
 import { CurrencyAmount, Pair, Route, Token, Trade } from "../src/entities";
 
 import JSBI from "jsbi";
-import { TradeType } from "../src/enums";
+import { Protocol, TradeType } from "../src/enums";
 import { WETH9 as _WETH9 } from "../src/constants/tokens";
 import invariant from "tiny-invariant";
 
@@ -46,7 +46,8 @@ describe("entities", () => {
             CurrencyAmount.fromRawAmount(
               tokens[1],
               decimalize(1, tokens[1].decimals)
-            )
+            ),
+            Protocol["SUSHISWAP"]
           ),
           new Pair(
             CurrencyAmount.fromRawAmount(
@@ -56,7 +57,8 @@ describe("entities", () => {
             CurrencyAmount.fromRawAmount(
               tokens[2],
               decimalize(1, tokens[2].decimals)
-            )
+            ),
+            Protocol["SUSHISWAP"]
           ),
           new Pair(
             CurrencyAmount.fromRawAmount(
@@ -66,7 +68,8 @@ describe("entities", () => {
             CurrencyAmount.fromRawAmount(
               WETH9,
               decimalize(1234, WETH9.decimals)
-            )
+            ),
+            Protocol["SUSHISWAP"]
           )
         ];
       });
@@ -133,7 +136,8 @@ describe("entities", () => {
                 CurrencyAmount.fromRawAmount(
                   WETH9,
                   decimalize(10, WETH9.decimals)
-                )
+                ),
+                Protocol["SUSHISWAP"]
               )
             ],
             tokens[1],
@@ -221,7 +225,8 @@ describe("entities", () => {
                         ? JSBI.BigInt("30090280812437312")
                         : JSBI.BigInt("30090270812437322")
                     )
-                  )
+                  ),
+                  Protocol["SUSHISWAP"]
                 )
               ],
               tokens[1],

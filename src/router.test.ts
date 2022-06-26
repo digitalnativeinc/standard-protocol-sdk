@@ -5,6 +5,7 @@ import JSBI from "jsbi";
 import { Router } from "./router";
 import { WETH9 } from "./constants";
 import invariant from "tiny-invariant";
+import { Protocol } from ".";
 
 function checkDeadline(deadline: string[] | string): void {
   expect(typeof deadline).toBe("string");
@@ -32,12 +33,14 @@ describe("Router", () => {
 
   const pair_0_1 = new Pair(
     CurrencyAmount.fromRawAmount(token0, JSBI.BigInt(1000)),
-    CurrencyAmount.fromRawAmount(token1, JSBI.BigInt(1000))
+    CurrencyAmount.fromRawAmount(token1, JSBI.BigInt(1000)),
+    Protocol["SUSHISWAP"]
   );
 
   const pair_weth_0 = new Pair(
     CurrencyAmount.fromRawAmount(WETH9[1], "1000"),
-    CurrencyAmount.fromRawAmount(token0, "1000")
+    CurrencyAmount.fromRawAmount(token0, "1000"),
+    Protocol["SUSHISWAP"]
   );
 
   describe("#swapCallParameters", () => {

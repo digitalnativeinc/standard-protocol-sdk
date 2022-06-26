@@ -4,8 +4,11 @@ import { InsufficientInputAmountError } from "../errors";
 import { Pair } from "./Pair";
 import { WETH9 } from "../constants";
 import { computePairAddress } from "../functions";
+import { Protocol } from "..";
 
 describe("computePairAddress", () => {
+  const protocol = Protocol.SUSHISWAP;
+    
   it("should correctly compute the pool address", () => {
     const tokenA = new Token(
       1,
@@ -24,7 +27,8 @@ describe("computePairAddress", () => {
     const result = computePairAddress({
       factoryAddress: "0x1111111111111111111111111111111111111111",
       tokenA,
-      tokenB
+      tokenB,
+      protocol
     });
 
     expect(result).toEqual("0xbCfFCD50d09095E48CC5ea02d564CAEe61aBc004");
@@ -49,7 +53,8 @@ describe("computePairAddress", () => {
     const resultA = computePairAddress({
       factoryAddress: "0x1111111111111111111111111111111111111111",
       tokenA,
-      tokenB
+      tokenB,
+      protocol
     });
 
     tokenA = DAI;
@@ -57,7 +62,8 @@ describe("computePairAddress", () => {
     const resultB = computePairAddress({
       factoryAddress: "0x1111111111111111111111111111111111111111",
       tokenA,
-      tokenB
+      tokenB,
+      protocol
     });
 
     expect(resultA).toEqual(resultB);
@@ -86,7 +92,8 @@ describe("Pair", () => {
         () =>
           new Pair(
             CurrencyAmount.fromRawAmount(USDC, "100"),
-            CurrencyAmount.fromRawAmount(WETH9[3], "100")
+            CurrencyAmount.fromRawAmount(WETH9[3], "100"),
+            Protocol.SUSHISWAP
           )
       ).toThrow("CHAIN_IDS");
     });
@@ -94,7 +101,7 @@ describe("Pair", () => {
 
   describe("#getAddress", () => {
     it("returns the correct address", () => {
-      expect(Pair.getAddress(USDC, DAI)).toEqual(
+      expect(Pair.getAddress(USDC, DAI, Protocol.SUSHISWAP)).toEqual(
         "0xAaF5110db6e744ff70fB339DE037B990A20bdace"
       );
     });
@@ -105,13 +112,15 @@ describe("Pair", () => {
       expect(
         new Pair(
           CurrencyAmount.fromRawAmount(USDC, "100"),
-          CurrencyAmount.fromRawAmount(DAI, "100")
+          CurrencyAmount.fromRawAmount(DAI, "100"),
+          Protocol.SUSHISWAP
         ).token0
       ).toEqual(DAI);
       expect(
         new Pair(
           CurrencyAmount.fromRawAmount(DAI, "100"),
-          CurrencyAmount.fromRawAmount(USDC, "100")
+          CurrencyAmount.fromRawAmount(USDC, "100"),
+          Protocol.SUSHISWAP
         ).token0
       ).toEqual(DAI);
     });
@@ -121,13 +130,15 @@ describe("Pair", () => {
       expect(
         new Pair(
           CurrencyAmount.fromRawAmount(USDC, "100"),
-          CurrencyAmount.fromRawAmount(DAI, "100")
+          CurrencyAmount.fromRawAmount(DAI, "100"),
+          Protocol.SUSHISWAP
         ).token1
       ).toEqual(USDC);
       expect(
         new Pair(
           CurrencyAmount.fromRawAmount(DAI, "100"),
-          CurrencyAmount.fromRawAmount(USDC, "100")
+          CurrencyAmount.fromRawAmount(USDC, "100"),
+          Protocol.SUSHISWAP
         ).token1
       ).toEqual(USDC);
     });
@@ -137,13 +148,15 @@ describe("Pair", () => {
       expect(
         new Pair(
           CurrencyAmount.fromRawAmount(USDC, "100"),
-          CurrencyAmount.fromRawAmount(DAI, "101")
+          CurrencyAmount.fromRawAmount(DAI, "101"),
+          Protocol.SUSHISWAP
         ).reserve0
       ).toEqual(CurrencyAmount.fromRawAmount(DAI, "101"));
       expect(
         new Pair(
           CurrencyAmount.fromRawAmount(DAI, "101"),
-          CurrencyAmount.fromRawAmount(USDC, "100")
+          CurrencyAmount.fromRawAmount(USDC, "100"),
+          Protocol.SUSHISWAP
         ).reserve0
       ).toEqual(CurrencyAmount.fromRawAmount(DAI, "101"));
     });
@@ -153,13 +166,15 @@ describe("Pair", () => {
       expect(
         new Pair(
           CurrencyAmount.fromRawAmount(USDC, "100"),
-          CurrencyAmount.fromRawAmount(DAI, "101")
+          CurrencyAmount.fromRawAmount(DAI, "101"),
+          Protocol.SUSHISWAP
         ).reserve1
       ).toEqual(CurrencyAmount.fromRawAmount(USDC, "100"));
       expect(
         new Pair(
           CurrencyAmount.fromRawAmount(DAI, "101"),
-          CurrencyAmount.fromRawAmount(USDC, "100")
+          CurrencyAmount.fromRawAmount(USDC, "100"),
+          Protocol.SUSHISWAP
         ).reserve1
       ).toEqual(CurrencyAmount.fromRawAmount(USDC, "100"));
     });
@@ -170,13 +185,15 @@ describe("Pair", () => {
       expect(
         new Pair(
           CurrencyAmount.fromRawAmount(USDC, "101"),
-          CurrencyAmount.fromRawAmount(DAI, "100")
+          CurrencyAmount.fromRawAmount(DAI, "100"),
+          Protocol.SUSHISWAP
         ).token0Price
       ).toEqual(new Price(DAI, USDC, "100", "101"));
       expect(
         new Pair(
           CurrencyAmount.fromRawAmount(DAI, "100"),
-          CurrencyAmount.fromRawAmount(USDC, "101")
+          CurrencyAmount.fromRawAmount(USDC, "101"),
+          Protocol.SUSHISWAP
         ).token0Price
       ).toEqual(new Price(DAI, USDC, "100", "101"));
     });
@@ -187,13 +204,15 @@ describe("Pair", () => {
       expect(
         new Pair(
           CurrencyAmount.fromRawAmount(USDC, "101"),
-          CurrencyAmount.fromRawAmount(DAI, "100")
+          CurrencyAmount.fromRawAmount(DAI, "100"),
+          Protocol.SUSHISWAP
         ).token1Price
       ).toEqual(new Price(USDC, DAI, "101", "100"));
       expect(
         new Pair(
           CurrencyAmount.fromRawAmount(DAI, "100"),
-          CurrencyAmount.fromRawAmount(USDC, "101")
+          CurrencyAmount.fromRawAmount(USDC, "101"),
+          Protocol.SUSHISWAP
         ).token1Price
       ).toEqual(new Price(USDC, DAI, "101", "100"));
     });
@@ -202,7 +221,8 @@ describe("Pair", () => {
   describe("#priceOf", () => {
     const pair = new Pair(
       CurrencyAmount.fromRawAmount(USDC, "101"),
-      CurrencyAmount.fromRawAmount(DAI, "100")
+      CurrencyAmount.fromRawAmount(DAI, "100"),
+      Protocol.SUSHISWAP
     );
     it("returns price of token in terms of other token", () => {
       expect(pair.priceOf(DAI)).toEqual(pair.token0Price);
@@ -219,13 +239,15 @@ describe("Pair", () => {
       expect(
         new Pair(
           CurrencyAmount.fromRawAmount(USDC, "100"),
-          CurrencyAmount.fromRawAmount(DAI, "101")
+          CurrencyAmount.fromRawAmount(DAI, "101"),
+          Protocol.SUSHISWAP
         ).reserveOf(USDC)
       ).toEqual(CurrencyAmount.fromRawAmount(USDC, "100"));
       expect(
         new Pair(
           CurrencyAmount.fromRawAmount(DAI, "101"),
-          CurrencyAmount.fromRawAmount(USDC, "100")
+          CurrencyAmount.fromRawAmount(USDC, "100"),
+          Protocol.SUSHISWAP
         ).reserveOf(USDC)
       ).toEqual(CurrencyAmount.fromRawAmount(USDC, "100"));
     });
@@ -234,7 +256,8 @@ describe("Pair", () => {
       expect(() =>
         new Pair(
           CurrencyAmount.fromRawAmount(DAI, "101"),
-          CurrencyAmount.fromRawAmount(USDC, "100")
+          CurrencyAmount.fromRawAmount(USDC, "100"),
+          Protocol.SUSHISWAP
         ).reserveOf(WETH9[1])
       ).toThrow("TOKEN");
     });
@@ -245,13 +268,15 @@ describe("Pair", () => {
       expect(
         new Pair(
           CurrencyAmount.fromRawAmount(USDC, "100"),
-          CurrencyAmount.fromRawAmount(DAI, "100")
+          CurrencyAmount.fromRawAmount(DAI, "100"),
+          Protocol.SUSHISWAP
         ).chainId
       ).toEqual(1);
       expect(
         new Pair(
           CurrencyAmount.fromRawAmount(DAI, "100"),
-          CurrencyAmount.fromRawAmount(USDC, "100")
+          CurrencyAmount.fromRawAmount(USDC, "100"),
+          Protocol.SUSHISWAP
         ).chainId
       ).toEqual(1);
     });
@@ -260,19 +285,22 @@ describe("Pair", () => {
     expect(
       new Pair(
         CurrencyAmount.fromRawAmount(USDC, "100"),
-        CurrencyAmount.fromRawAmount(DAI, "100")
+        CurrencyAmount.fromRawAmount(DAI, "100"),
+        Protocol.SUSHISWAP
       ).involvesToken(USDC)
     ).toEqual(true);
     expect(
       new Pair(
         CurrencyAmount.fromRawAmount(USDC, "100"),
-        CurrencyAmount.fromRawAmount(DAI, "100")
+        CurrencyAmount.fromRawAmount(DAI, "100"),
+        Protocol.SUSHISWAP
       ).involvesToken(DAI)
     ).toEqual(true);
     expect(
       new Pair(
         CurrencyAmount.fromRawAmount(USDC, "100"),
-        CurrencyAmount.fromRawAmount(DAI, "100")
+        CurrencyAmount.fromRawAmount(DAI, "100"),
+        Protocol.SUSHISWAP
       ).involvesToken(WETH9[1])
     ).toEqual(false);
   });
@@ -290,7 +318,8 @@ describe("Pair", () => {
       );
       const pair = new Pair(
         CurrencyAmount.fromRawAmount(tokenA, "0"),
-        CurrencyAmount.fromRawAmount(tokenB, "0")
+        CurrencyAmount.fromRawAmount(tokenB, "0"),
+        Protocol.SUSHISWAP
       );
 
       expect(() => {
@@ -331,7 +360,8 @@ describe("Pair", () => {
       );
       const pair = new Pair(
         CurrencyAmount.fromRawAmount(tokenA, "10000"),
-        CurrencyAmount.fromRawAmount(tokenB, "10000")
+        CurrencyAmount.fromRawAmount(tokenB, "10000"),
+        Protocol.SUSHISWAP
       );
 
       expect(
@@ -358,7 +388,8 @@ describe("Pair", () => {
       );
       const pair = new Pair(
         CurrencyAmount.fromRawAmount(tokenA, "1000"),
-        CurrencyAmount.fromRawAmount(tokenB, "1000")
+        CurrencyAmount.fromRawAmount(tokenB, "1000"),
+        Protocol.SUSHISWAP
       );
 
       {
@@ -410,7 +441,8 @@ describe("Pair", () => {
       );
       const pair = new Pair(
         CurrencyAmount.fromRawAmount(tokenA, "1000"),
-        CurrencyAmount.fromRawAmount(tokenB, "1000")
+        CurrencyAmount.fromRawAmount(tokenB, "1000"),
+        Protocol["SUSHISWAP"]
       );
 
       const liquidityValue = pair.getLiquidityValue(
