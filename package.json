@@ -31,6 +31,7 @@
     "publish": "yarn build && yarn publish"
   },
   "dependencies": {
+    "babel-jest": "^28.1.1",
     "big.js": "^6.1.0",
     "decimal.js-light": "^2.5.0",
     "isomorphic-unfetch": "^3.1.0",
