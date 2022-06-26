@@ -1,7 +1,7 @@
 {
   "name": "@digitalnative/standard-protocol-sdk",
   "license": "MIT",
-  "version": "0.0.194",
+  "version": "0.0.195",
   "description": "🛠 An SDK for building applications on top of Standard Protocol.",
   "main": "dist/index.js",
   "module": "./dist/index.module.js",
@@ -26,7 +26,7 @@
     "watch": "microbundle watch",
     "test": "tsdx test",
     "prepublishOnly": "microbundle build",
-    "prepare": "husky install",
+    "prepare": "husky install && microbundle build",
     "prettier": "prettier --write 'src/**/*.ts' 'test/**/*.ts'",
     "publish": "yarn build && yarn publish"
   },
