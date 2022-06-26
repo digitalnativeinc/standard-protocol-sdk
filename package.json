@@ -24,7 +24,7 @@
     "lint": "tsdx lint src test",
     "build": "microbundle build",
     "watch": "microbundle watch",
-    "test": "tsdx testp",
+    "test": "tsdx test",
     "prepublishOnly": "microbundle build",
     "prepare": "husky install",
     "prettier": "prettier --write 'src/**/*.ts' 'test/**/*.ts'",
