@@ -12,5 +12,5 @@ export type ProtocolMap = {
   METER_ADDRESS?: AddressMap;
   VAULT_MANAGER_ADDRESS?: AddressMap;
   V1_ADDRESS?: AddressMap;
-  VAULT_ORACLE_ADDRESS?: AddressMap;
+  DIA_ORACLE_ADDRESS?: AddressMap;
 };
