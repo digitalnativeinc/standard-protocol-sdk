@@ -18,9 +18,7 @@ export class Shiden extends NativeCurrency {
   private static _cache: { [chainId: number]: Shiden } = {};
 
   public static onChain(chainId: number): Shiden {
-    return (
-      this._cache[chainId] ?? (this._cache[chainId] = new Shiden(chainId))
-    );
+    return this._cache[chainId] ?? (this._cache[chainId] = new Shiden(chainId));
   }
 
   public equals(other: Currency): boolean {

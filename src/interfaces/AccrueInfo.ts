@@ -1,7 +1,7 @@
-import { BigNumber } from '@ethersproject/bignumber'
+import { BigNumber } from "@ethersproject/bignumber";
 
 export interface AccrueInfo {
-  interestPerSecond: BigNumber
-  lastAccrued: BigNumber
-  feesEarnedFraction: BigNumber
+  interestPerSecond: BigNumber;
+  lastAccrued: BigNumber;
+  feesEarnedFraction: BigNumber;
 }

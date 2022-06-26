@@ -30,11 +30,6 @@
     "prettier": "prettier --write 'src/**/*.ts' 'test/**/*.ts'",
     "publish": "yarn build && yarn publish"
   },
-  "config": {
-    "pre-git": {
-      "allow-untracked-files": false
-    }
-  },
   "dependencies": {
     "big.js": "^6.1.0",
     "decimal.js-light": "^2.5.0",

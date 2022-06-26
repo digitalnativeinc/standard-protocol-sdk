@@ -1,6 +1,6 @@
-import { BigNumber } from '@ethersproject/bignumber'
+import { BigNumber } from "@ethersproject/bignumber";
 
 export interface Rebase {
-  base: BigNumber
-  elastic: BigNumber
+  base: BigNumber;
+  elastic: BigNumber;
 }

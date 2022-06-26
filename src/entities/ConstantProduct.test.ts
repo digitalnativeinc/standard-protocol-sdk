@@ -1,8 +1,8 @@
-import { USDC_ADDRESS, WETH9_ADDRESS } from '../constants'
+import { USDC_ADDRESS, WETH9_ADDRESS } from "../constants";
 
-import { ChainId } from '../enums'
-import { Token } from '.'
-import { computeConstantProductPoolAddress } from '../functions/computeConstantProductPoolAddress'
+import { ChainId } from "../enums";
+import { Token } from ".";
+import { computeConstantProductPoolAddress } from "../functions/computeConstantProductPoolAddress";
 
 // import { keccak256, pack } from '@ethersproject/solidity'
 
@@ -36,22 +36,34 @@ import { computeConstantProductPoolAddress } from '../functions/computeConstantP
 //   })
 // })
 
-describe('computePoolAddress', () => {
-  it('should correctly compute the pool address 2', () => {
-    const tokenA = new Token(ChainId.KOVAN, USDC_ADDRESS[ChainId.KOVAN], 6, 'USDC', 'USD Coin')
-    const tokenB = new Token(ChainId.KOVAN, WETH9_ADDRESS[ChainId.KOVAN], 18, 'WETH', 'Wrapped Ether')
+describe("computePoolAddress", () => {
+  it("should correctly compute the pool address 2", () => {
+    const tokenA = new Token(
+      ChainId.KOVAN,
+      USDC_ADDRESS[ChainId.KOVAN],
+      6,
+      "USDC",
+      "USD Coin"
+    );
+    const tokenB = new Token(
+      ChainId.KOVAN,
+      WETH9_ADDRESS[ChainId.KOVAN],
+      18,
+      "WETH",
+      "Wrapped Ether"
+    );
 
-    const fee = 30
+    const fee = 30;
 
-    const twap = true
+    const twap = true;
 
     const address = computeConstantProductPoolAddress({
-      factoryAddress: '0x2d7933851D0b372ffB810793Cf86D33177F6812f',
+      factoryAddress: "0x2d7933851D0b372ffB810793Cf86D33177F6812f",
       tokenA,
       tokenB,
       fee,
       twap
-    })
+    });
 
     // const address = getCreate2Address(
     //   '0x2d7933851D0b372ffB810793Cf86D33177F6812f',
@@ -59,9 +71,9 @@ describe('computePoolAddress', () => {
     //   INIT_CODE_HASH
     // )
 
-    expect(address).toEqual('0x0d4EC1428C59EBDEE041a7Caa2c84567218063f9')
-  })
-})
+    expect(address).toEqual("0x0d4EC1428C59EBDEE041a7Caa2c84567218063f9");
+  });
+});
 
 // describe('ConstantProductPool', () => {
 //   const USDC = new Token(1, '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48', 18, 'USDC', 'USD Coin')
